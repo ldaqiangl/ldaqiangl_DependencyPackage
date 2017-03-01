@@ -39,8 +39,8 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  # s.license      = "MIT"
+  s.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -144,8 +144,8 @@ Pod::Spec.new do |s|
         # TabBarController
         customui.subspec 'TabBarController' do |sss|
 
-            sss.source_files = 'ldaqiangl_DependencyPackage/CustomUI/TabBarController/**/*'
-            sss.public_header_files = 'ldaqiangl_DependencyPackage/CustomUI/TabBarController/**/*'
+            sss.source_files = 'ldaqiangl_DependencyPackage/CustomUI/TabBarController/**/*.{h,m}'
+            sss.public_header_files = 'ldaqiangl_DependencyPackage/CustomUI/TabBarController/**/*.h'
             sss.dependency 'ldaqiangl_DependencyPackage/Kits/CustomControls'
             sss.dependency 'ldaqiangl_DependencyPackage/Kits/Categories'
             sss.dependency 'ldaqiangl_DependencyPackage/Kits/Macros'
@@ -154,8 +154,8 @@ Pod::Spec.new do |s|
         # WebViewController
         customui.subspec 'WebViewController' do |sss|
 
-            sss.source_files = 'ldaqiangl_DependencyPackage/CustomUI/WebViewController/**/*'
-            sss.public_header_files = 'ldaqiangl_DependencyPackage/CustomUI/WebViewController/**/*'
+            sss.source_files = 'ldaqiangl_DependencyPackage/CustomUI/WebViewController/**/*.{h,m}'
+            sss.public_header_files = 'ldaqiangl_DependencyPackage/CustomUI/WebViewController/**/*.h'
             sss.dependency 'NJKWebViewProgress'
             sss.dependency 'WebViewJavascriptBridge'
             sss.dependency 'ldaqiangl_DependencyPackage/Kits/Categories'
@@ -172,28 +172,28 @@ Pod::Spec.new do |s|
         # 网络请求
         ss.subspec 'NetWork' do |sss|
 
-            sss.source_files = 'ldaqiangl_DependencyPackage/Helper/Network/*'
-            sss.public_header_files = 'ldaqiangl_DependencyPackage/Helper/Network/*'
+            sss.source_files = 'ldaqiangl_DependencyPackage/Helper/Network/*.{h,m}'
+            sss.public_header_files = 'ldaqiangl_DependencyPackage/Helper/Network/*.h'
             sss.dependency 'AFNetworking'
         end
 
         # 数据存储
         ss.subspec 'Storage' do |sss|
 
-            sss.source_files = 'ldaqiangl_DependencyPackage/Helper/Storage/*'
-            sss.public_header_files = 'ldaqiangl_DependencyPackage/Helper/Storage/*'
+            sss.source_files = 'ldaqiangl_DependencyPackage/Helper/Storage/*.{h,m}'
+            sss.public_header_files = 'ldaqiangl_DependencyPackage/Helper/Storage/*.h'
             sss.dependency 'FMDB'
         end
 
         # 提示器
         ss.subspec 'Prompt' do |sss|
 
-            sss.source_files = 'ldaqiangl_DependencyPackage/Helper/Prompt/*'
-            sss.public_header_files = 'ldaqiangl_DependencyPackage/Helper/Prompt/*'
+            sss.source_files = 'ldaqiangl_DependencyPackage/Helper/Prompt/*.{h,m}'
+            sss.public_header_files = 'ldaqiangl_DependencyPackage/Helper/Prompt/*.h'
             #sss.resource = 'HXDepedent_utility/Helper/Prompt/HXPromptSource.bundle'
             sss.resource_bundles =
             {
-                'Prompt' => ['ldaqiangl_DependencyPackage/Helper/Prompt/Assets/*']
+                'Prompt' => ['ldaqiangl_DependencyPackage/Helper/Prompt/Assets/*.png']
             }
             sss.dependency 'MBProgressHUD'
         end
@@ -209,8 +209,8 @@ Pod::Spec.new do |s|
         # 分类
         kits.subspec 'Categories' do |category|
 
-            category.source_files = 'ldaqiangl_DependencyPackage/Kits/Categories/**/*'
-            category.public_header_files = 'ldaqiangl_DependencyPackage/Kits/Categories/**/*'
+            category.source_files = 'ldaqiangl_DependencyPackage/Kits/Categories/**/*.{h,m}'
+            category.public_header_files = 'ldaqiangl_DependencyPackage/Kits/Categories/**/*.h'
             category.dependency 'MJRefresh'
             category.dependency 'DZNEmptyDataSet'
         end
@@ -219,7 +219,7 @@ Pod::Spec.new do |s|
         kits.subspec 'Tools' do |tool|
 
             tool.source_files = 'ldaqiangl_DependencyPackage/Kits/Tools/**/*'
-            tool.public_header_files = 'ldaqiangl_DependencyPackage/Kits/Tools/*'
+            tool.public_header_files = 'ldaqiangl_DependencyPackage/Kits/Tools/*.h'
             tool.dependency 'ldaqiangl_DependencyPackage/Kits/Macros'
         end
 
@@ -232,8 +232,8 @@ Pod::Spec.new do |s|
             # Button
             customControl.subspec 'Button' do |button|
 
-                button.source_files = 'ldaqiangl_DependencyPackage/Kits/CustomControls/Buttons/**/*'
-                button.public_header_files = 'ldaqiangl_DependencyPackage/Kits/CustomControls/Buttons/**/*'
+                button.source_files = 'ldaqiangl_DependencyPackage/Kits/CustomControls/Buttons/**/*.{h,m}'
+                button.public_header_files = 'ldaqiangl_DependencyPackage/Kits/CustomControls/Buttons/**/*.h'
                 button.dependency 'ldaqiangl_DependencyPackage/Kits/Categories'
             end
         end
@@ -242,7 +242,7 @@ Pod::Spec.new do |s|
         kits.subspec 'Macros' do |macro|
 
             macro.source_files = 'ldaqiangl_DependencyPackage/Kits/Macros/**/*'
-            macro.public_header_files = 'ldaqiangl_DependencyPackage/Kits/Macros/*'
+            macro.public_header_files = 'ldaqiangl_DependencyPackage/Kits/Macros/*.h'
         end
     end
 
@@ -256,8 +256,8 @@ Pod::Spec.new do |s|
         # App 管理
         ss.subspec 'AppManagerModule' do |sss|
 
-            sss.source_files = 'ldaqiangl_DependencyPackage/Modules/AppManagerModule/*'
-            sss.public_header_files = 'ldaqiangl_DependencyPackage/Modules/AppManagerModule/*'
+            sss.source_files = 'ldaqiangl_DependencyPackage/Modules/AppManagerModule/*.{h,m}'
+            sss.public_header_files = 'ldaqiangl_DependencyPackage/Modules/AppManagerModule/*.h'
             sss.dependency 'ldaqiangl_DependencyPackage/Helper/NetWork'
         end
 
@@ -271,28 +271,28 @@ Pod::Spec.new do |s|
         # 多媒体请求
         ss.subspec 'MediaServiceModule' do |sss|
 
-            sss.source_files = 'ldaqiangl_DependencyPackage/Modules/MediaService/*'
-            sss.public_header_files = 'ldaqiangl_DependencyPackage/Modules/MediaService/*'
+            sss.source_files = 'ldaqiangl_DependencyPackage/Modules/MediaService/*.{h,m}'
+            sss.public_header_files = 'ldaqiangl_DependencyPackage/Modules/MediaService/*.h'
             sss.dependency 'ldaqiangl_DependencyPackage/Helper/NetWork'
         end
 
         # 环境配置
         ss.subspec 'EnvironmentConfigModule' do |sss|
-            sss.source_files = 'ldaqiangl_DependencyPackage/Modules/EnvironmentConfig/*'
-            sss.public_header_files = 'ldaqiangl_DependencyPackage/Modules/EnvironmentConfig/*'
+            sss.source_files = 'ldaqiangl_DependencyPackage/Modules/EnvironmentConfig/*.{h,m}'
+            sss.public_header_files = 'ldaqiangl_DependencyPackage/Modules/EnvironmentConfig/*.h'
             sss.dependency 'MJExtension'
         end
 
         # 用户信息
         ss.subspec 'UserInfoCenterModule' do |sss|
-            sss.source_files = 'ldaqiangl_DependencyPackage/Modules/UserInfoCenter/*'
-            sss.public_header_files = 'ldaqiangl_DependencyPackage/Modules/UserInfoCenter/*'
+            sss.source_files = 'ldaqiangl_DependencyPackage/Modules/UserInfoCenter/*.{h,m}'
+            sss.public_header_files = 'ldaqiangl_DependencyPackage/Modules/UserInfoCenter/*.h'
         end
 
         # 业务请求
         ss.subspec 'BusinessRequestModule' do |sss|
-            sss.source_files = 'ldaqiangl_DependencyPackage/Module/BusinessRequest/**/*'
-            sss.public_header_files = 'ldaqiangl_DependencyPackage/Module/BusinessRequest/**/*'
+            sss.source_files = 'ldaqiangl_DependencyPackage/Modules/BusinessRequest/**/*.{h,m}'
+            sss.public_header_files = 'ldaqiangl_DependencyPackage/Modules/BusinessRequest/**/*.h'
             sss.dependency 'ldaqiangl_DependencyPackage/Helper/NetWork'
             sss.dependency 'ldaqiangl_DependencyPackage/Helper/Storage'
             sss.dependency 'ldaqiangl_DependencyPackage/Modules/MediaServiceModule'
