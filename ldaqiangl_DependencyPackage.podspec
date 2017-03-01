@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+  大强封装心之力公司项目依赖管理 ldaqiangl_DependencyPackage CopyRight@xzlcrop
                    DESC
 
   s.homepage     = "http://www.ldaqiangl.com"
@@ -65,7 +66,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios
   s.platform     = :ios, "7.0"
-  s.ios.deployment_target = "5.0"
+  s.ios.deployment_target = "7.0"
   #  When using multiple platforms
   # s.osx.deployment_target = "10.7"
   # s.watchos.deployment_target = "2.0"
@@ -92,7 +93,7 @@ Pod::Spec.new do |s|
   s.public_header_files = "ldaqiangl_DependencyPackage/ldaqiangl_DependencyPackage.h"
   s.source_files  = "ldaqiangl_DependencyPackage/ldaqiangl_DependencyPackage.h"
   #{}"ldaqiangl_DependencyPackage", "ldaqiangl_DependencyPackage/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  # s.exclude_files = "Classes/Exclude"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -143,9 +144,9 @@ Pod::Spec.new do |s|
         # TabBarController
         customui.subspec 'TabBarController' do |sss|
 
-            sss.source_files = 'ldaqiangl_DependencyPackage/CustomUI/TabBarController/**/*.{h,m}'
-            sss.public_header_files = 'ldaqiangl_DependencyPackage/CustomUI/TabBarController/**/*.h'
-            sss.dependency 'ldaqiangl_DependencyPackage/Kits/CustomControl'
+            sss.source_files = 'ldaqiangl_DependencyPackage/CustomUI/TabBarController/**/*'
+            sss.public_header_files = 'ldaqiangl_DependencyPackage/CustomUI/TabBarController/**/*'
+            sss.dependency 'ldaqiangl_DependencyPackage/Kits/CustomControls'
             sss.dependency 'ldaqiangl_DependencyPackage/Kits/Categories'
             sss.dependency 'ldaqiangl_DependencyPackage/Kits/Macros'
         end
@@ -153,8 +154,8 @@ Pod::Spec.new do |s|
         # WebViewController
         customui.subspec 'WebViewController' do |sss|
 
-            sss.source_files = 'ldaqiangl_DependencyPackage/CustomUI/WebViewController/**/*.{h,m}'
-            sss.public_header_files = 'ldaqiangl_DependencyPackage/CustomUI/WebViewController/**/*.h'
+            sss.source_files = 'ldaqiangl_DependencyPackage/CustomUI/WebViewController/**/*'
+            sss.public_header_files = 'ldaqiangl_DependencyPackage/CustomUI/WebViewController/**/*'
             sss.dependency 'NJKWebViewProgress'
             sss.dependency 'WebViewJavascriptBridge'
             sss.dependency 'ldaqiangl_DependencyPackage/Kits/Categories'
@@ -171,28 +172,28 @@ Pod::Spec.new do |s|
         # 网络请求
         ss.subspec 'NetWork' do |sss|
 
-            sss.source_files = 'ldaqiangl_DependencyPackage/Helper/Network/*.{h,m}'
-            sss.public_header_files = 'ldaqiangl_DependencyPackage/Helper/Network/*.h'
+            sss.source_files = 'ldaqiangl_DependencyPackage/Helper/Network/*'
+            sss.public_header_files = 'ldaqiangl_DependencyPackage/Helper/Network/*'
             sss.dependency 'AFNetworking'
         end
 
         # 数据存储
         ss.subspec 'Storage' do |sss|
 
-            sss.source_files = 'ldaqiangl_DependencyPackage/Helper/Storage/*.{h,m}'
-            sss.public_header_files = 'ldaqiangl_DependencyPackage/Helper/Storage/*.h'
+            sss.source_files = 'ldaqiangl_DependencyPackage/Helper/Storage/*'
+            sss.public_header_files = 'ldaqiangl_DependencyPackage/Helper/Storage/*'
             sss.dependency 'FMDB'
         end
 
         # 提示器
         ss.subspec 'Prompt' do |sss|
 
-            sss.source_files = 'ldaqiangl_DependencyPackage/Helper/Prompt/*.{h,m}'
-            sss.public_header_files = 'ldaqiangl_DependencyPackage/Helper/Prompt/*.h'
+            sss.source_files = 'ldaqiangl_DependencyPackage/Helper/Prompt/*'
+            sss.public_header_files = 'ldaqiangl_DependencyPackage/Helper/Prompt/*'
             #sss.resource = 'HXDepedent_utility/Helper/Prompt/HXPromptSource.bundle'
             sss.resource_bundles =
             {
-                'Prompt' => ['ldaqiangl_DependencyPackage/Helper/Prompt/Assets/*.png']
+                'Prompt' => ['ldaqiangl_DependencyPackage/Helper/Prompt/Assets/*']
             }
             sss.dependency 'MBProgressHUD'
         end
@@ -202,14 +203,14 @@ Pod::Spec.new do |s|
 
       s.subspec 'Kits' do |kits|
 
-        kits.source_files = 'ldaqiangl_DependencyPackage/Kits/DQKit.h'
-        kits.public_header_files = 'ldaqiangl_DependencyPackage/Kits/DQKit.h'
+        kits.source_files = 'ldaqiangl_DependencyPackage/Kits/DQKits.h'
+        kits.public_header_files = 'ldaqiangl_DependencyPackage/Kits/DQKits.h'
 
         # 分类
         kits.subspec 'Categories' do |category|
 
-            category.source_files = 'ldaqiangl_DependencyPackage/Kits/Categories/**/*.{h,m}'
-            category.public_header_files = 'ldaqiangl_DependencyPackage/Kits/Categories/**/*.h'
+            category.source_files = 'ldaqiangl_DependencyPackage/Kits/Categories/**/*'
+            category.public_header_files = 'ldaqiangl_DependencyPackage/Kits/Categories/**/*'
             category.dependency 'MJRefresh'
             category.dependency 'DZNEmptyDataSet'
         end
@@ -218,7 +219,7 @@ Pod::Spec.new do |s|
         kits.subspec 'Tools' do |tool|
 
             tool.source_files = 'ldaqiangl_DependencyPackage/Kits/Tools/**/*'
-            tool.public_header_files = 'ldaqiangl_DependencyPackage/Kits/Tools/*.h'
+            tool.public_header_files = 'ldaqiangl_DependencyPackage/Kits/Tools/*'
             tool.dependency 'ldaqiangl_DependencyPackage/Kits/Macros'
         end
 
@@ -231,8 +232,8 @@ Pod::Spec.new do |s|
             # Button
             customControl.subspec 'Button' do |button|
 
-                button.source_files = 'ldaqiangl_DependencyPackage/Kits/CustomControls/Buttons/**/*.{h,m}'
-                button.public_header_files = 'ldaqiangl_DependencyPackage/Kits/CustomControls/Buttons/**/*.h'
+                button.source_files = 'ldaqiangl_DependencyPackage/Kits/CustomControls/Buttons/**/*'
+                button.public_header_files = 'ldaqiangl_DependencyPackage/Kits/CustomControls/Buttons/**/*'
                 button.dependency 'ldaqiangl_DependencyPackage/Kits/Categories'
             end
         end
@@ -241,7 +242,7 @@ Pod::Spec.new do |s|
         kits.subspec 'Macros' do |macro|
 
             macro.source_files = 'ldaqiangl_DependencyPackage/Kits/Macros/**/*'
-            macro.public_header_files = 'ldaqiangl_DependencyPackage/Kits/Macros/*.h'
+            macro.public_header_files = 'ldaqiangl_DependencyPackage/Kits/Macros/*'
         end
     end
 
@@ -255,8 +256,8 @@ Pod::Spec.new do |s|
         # App 管理
         ss.subspec 'AppManagerModule' do |sss|
 
-            sss.source_files = 'ldaqiangl_DependencyPackage/Modules/AppManagerModule/*.{h,m}'
-            sss.public_header_files = 'ldaqiangl_DependencyPackage/Modules/AppManagerModule/*.h'
+            sss.source_files = 'ldaqiangl_DependencyPackage/Modules/AppManagerModule/*'
+            sss.public_header_files = 'ldaqiangl_DependencyPackage/Modules/AppManagerModule/*'
             sss.dependency 'ldaqiangl_DependencyPackage/Helper/NetWork'
         end
 
@@ -270,28 +271,28 @@ Pod::Spec.new do |s|
         # 多媒体请求
         ss.subspec 'MediaServiceModule' do |sss|
 
-            sss.source_files = 'ldaqiangl_DependencyPackage/Modules/MediaService/*.{h,m}'
-            sss.public_header_files = 'ldaqiangl_DependencyPackage/Modules/MediaService/*.h'
+            sss.source_files = 'ldaqiangl_DependencyPackage/Modules/MediaService/*'
+            sss.public_header_files = 'ldaqiangl_DependencyPackage/Modules/MediaService/*'
             sss.dependency 'ldaqiangl_DependencyPackage/Helper/NetWork'
         end
 
         # 环境配置
         ss.subspec 'EnvironmentConfigModule' do |sss|
-            sss.source_files = 'ldaqiangl_DependencyPackage/Modules/EnvironmentConfig/*.{h,m}'
-            sss.public_header_files = 'ldaqiangl_DependencyPackage/Modules/EnvironmentConfig/*.h'
+            sss.source_files = 'ldaqiangl_DependencyPackage/Modules/EnvironmentConfig/*'
+            sss.public_header_files = 'ldaqiangl_DependencyPackage/Modules/EnvironmentConfig/*'
             sss.dependency 'MJExtension'
         end
 
         # 用户信息
         ss.subspec 'UserInfoCenterModule' do |sss|
-            sss.source_files = 'ldaqiangl_DependencyPackage/Modules/UserInfoCenter/*.{h,m}'
-            sss.public_header_files = 'ldaqiangl_DependencyPackage/Modules/UserInfoCenter/*.h'
+            sss.source_files = 'ldaqiangl_DependencyPackage/Modules/UserInfoCenter/*'
+            sss.public_header_files = 'ldaqiangl_DependencyPackage/Modules/UserInfoCenter/*'
         end
 
         # 业务请求
         ss.subspec 'BusinessRequestModule' do |sss|
-            sss.source_files = 'ldaqiangl_DependencyPackage/Module/BusinessRequest/**/*.{h,m}'
-            sss.public_header_files = 'ldaqiangl_DependencyPackage/Module/BusinessRequest/**/*.h'
+            sss.source_files = 'ldaqiangl_DependencyPackage/Module/BusinessRequest/**/*'
+            sss.public_header_files = 'ldaqiangl_DependencyPackage/Module/BusinessRequest/**/*'
             sss.dependency 'ldaqiangl_DependencyPackage/Helper/NetWork'
             sss.dependency 'ldaqiangl_DependencyPackage/Helper/Storage'
             sss.dependency 'ldaqiangl_DependencyPackage/Modules/MediaServiceModule'
