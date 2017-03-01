@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ldaqiangl_DependencyPackage"
-  s.version      = "0.0.1"
+  s.version      = "0.0.3"
   s.summary      = "项目依赖封装 ldaqiangl_DependencyPackage."
 
   # This description is used to generate tags and improve search results.
