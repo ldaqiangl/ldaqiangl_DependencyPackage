@@ -10,4 +10,10 @@
 #define DQAppManagerHeader_h
 
 
+#import "DQAppManager.h"
+#import "DQAppStoreResult.h"
+#import "DQAppChannelPlatformConfig.h"
+#import "DQAppManagerConst.h"
+#import "DQAppFirResult.h"
+
 #endif /* DQAppManagerHeader_h */

@@ -9,5 +9,11 @@
 #ifndef DQModule_h
 #define DQModule_h
 
+#import "DQAppManagerHeader.h"
+#import "DQBusinessRequestHeader.h"
+#import "DQEnvironmentConfigHeader.h"
+#import "DQMediaServiceHeader.h"
+#import "DQUserInfoCenter.h"
+
 
 #endif /* DQModule_h */

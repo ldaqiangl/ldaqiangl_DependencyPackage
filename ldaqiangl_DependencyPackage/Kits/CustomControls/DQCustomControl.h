@@ -9,5 +9,6 @@
 #ifndef DQCustomControl_h
 #define DQCustomControl_h
 
+#import "DQButtonsHeader.h"
 
 #endif /* DQCustomControl_h */

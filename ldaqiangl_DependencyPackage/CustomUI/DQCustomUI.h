@@ -9,5 +9,7 @@
 #ifndef DQCustomUI_h
 #define DQCustomUI_h
 
+#import "DQTabBarController.h"
+#import "DQWebViewController.h"
 
 #endif /* DQCustomUI_h */

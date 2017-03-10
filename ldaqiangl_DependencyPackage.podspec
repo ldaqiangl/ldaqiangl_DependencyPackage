@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ldaqiangl_DependencyPackage"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "项目依赖封装 ldaqiangl_DependencyPackage."
 
   # This description is used to generate tags and improve search results.
@@ -65,8 +65,8 @@ Pod::Spec.new do |s|
   #
 
   s.platform     = :ios
-  s.platform     = :ios, "7.0"
-  s.ios.deployment_target = "7.0"
+  s.platform     = :ios, "8.0"
+  s.ios.deployment_target = "8.0"
   #  When using multiple platforms
   # s.osx.deployment_target = "10.7"
   # s.watchos.deployment_target = "2.0"
@@ -116,9 +116,10 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  # s.framework  = "SomeFramework"
-  # s.frameworks = "SomeFramework", "AnotherFramework"
-
+  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.frameworks = 'UIKit', 'MapKit'
+  # s.dependency 'AFNetworking', '~> 2.3'
+  
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
 
@@ -183,8 +184,11 @@ Pod::Spec.new do |s|
             sss.source_files = 'ldaqiangl_DependencyPackage/Helper/Storage/*.{h,m}'
             sss.public_header_files = 'ldaqiangl_DependencyPackage/Helper/Storage/*.h'
             sss.dependency 'FMDB'
+            sss.dependency 'MJExtension'
+            sss.dependency 'ldaqiangl_DependencyPackage/Kits/Macros'
+            sss.dependency 'ldaqiangl_DependencyPackage/Kits/Categories'
         end
-
+        
         # 提示器
         ss.subspec 'Prompt' do |sss|
 
@@ -270,7 +274,7 @@ Pod::Spec.new do |s|
 
         # 多媒体请求
         ss.subspec 'MediaServiceModule' do |sss|
-
+          
             sss.source_files = 'ldaqiangl_DependencyPackage/Modules/MediaService/*.{h,m}'
             sss.public_header_files = 'ldaqiangl_DependencyPackage/Modules/MediaService/*.h'
             sss.dependency 'ldaqiangl_DependencyPackage/Helper/NetWork'
@@ -300,5 +304,6 @@ Pod::Spec.new do |s|
             sss.dependency 'ldaqiangl_DependencyPackage/Modules/UserInfoCenterModule'
             sss.dependency 'MJExtension'
         end
+
       end
 end

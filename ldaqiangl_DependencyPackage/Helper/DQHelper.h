@@ -9,5 +9,10 @@
 #ifndef DQHelper_h
 #define DQHelper_h
 
+#import "DQNetWork.h"
+#import "DQPrompt.h"
+#import "DQStorage.h"
+
+
 
 #endif /* DQHelper_h */

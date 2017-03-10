@@ -9,5 +9,11 @@
 #ifndef DQStorage_h
 #define DQStorage_h
 
+#import "DQDefaultsHelper.h"
+#import "DQFileHelper.h"
+#import "DQDataBaseHelper.h"
+#import "DQDataBaseUtils.h"
+#import "DQUniversalDBDataModel.h"
+#import "DQDataBaseModel.h"
 
 #endif /* DQStorage_h */

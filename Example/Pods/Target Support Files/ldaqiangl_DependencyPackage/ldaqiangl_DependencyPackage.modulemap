@@ -1,0 +1,6 @@
+framework module ldaqiangl_DependencyPackage {
+  umbrella header "ldaqiangl_DependencyPackage-umbrella.h"
+
+  export *
+  module * { export * }
+}

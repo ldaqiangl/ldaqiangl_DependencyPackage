@@ -9,5 +9,7 @@
 #ifndef DQNetWork_h
 #define DQNetWork_h
 
+#import "DQNetWorkHelper.h"
+#import "DQURLProtocol.h"
 
 #endif /* DQNetWork_h */

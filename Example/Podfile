@@ -1,0 +1,15 @@
+use_frameworks!
+
+target 'ldaqiangl_DependencyPackage' do
+  pod 'ldaqiangl_DependencyPackage', :path => '../'
+
+  target 'ldaqiangl_DependencyPackageTests' do
+    inherit! :search_paths
+
+  pod 'Specta'
+  pod 'Expecta'
+  pod 'FBSnapshotTestCase'
+  pod 'Expecta+Snapshots'
+  end
+end
+

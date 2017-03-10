@@ -9,5 +9,6 @@
 #ifndef DQPrompt_h
 #define DQPrompt_h
 
+#import "DQPromptHelper.h"
 
 #endif /* DQPrompt_h */
