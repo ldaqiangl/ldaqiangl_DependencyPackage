@@ -9,5 +9,9 @@
 #ifndef ldaqiangl_DependencyPackage_h
 #define ldaqiangl_DependencyPackage_h
 
+#import "DQKits.h"
+#import "DQModule.h"
+#import "DQHelper.h"
+#import "DQCustomUI.h"
 
 #endif /* ldaqiangl_DependencyPackage_h */
